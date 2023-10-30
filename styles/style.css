@@ -1,4 +1,24 @@
+@font-face {
+    font-family: "fuente";
+    src: url("/assets/fonts/Quicksand-VariableFont_wght.ttf"); 
+}
+
+body{
+    font-family: "fuente";
+ background-color: bisque;
+}
+
 .container{
+  
     background: rgb(93, 93, 215);
+    background: radial-gradient(circle, rgb(4, 26, 226) 0%, rgb(179, 5, 179) 100%);
+    border-radius: 5px;
+    width: 50%;
+    height: 30%;
+    gap: 5px ;
     
+}
+button{
+    border-radius: 5px;
+
 }
