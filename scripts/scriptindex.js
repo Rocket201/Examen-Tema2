@@ -5,17 +5,40 @@
 
 let saldo = 1000
 PIN_CORRECTO = 1234
+intentosRestantes = 3
+// llamamos a iniciar sesion para que cargue el metodo contraseña
+window.document.addEventListener("load", contraseña)
 
-window.document.addEventListener("load",  )
 
+const depositarBtn = document.addEventListener("depositarBtn")
+const retirarBtn = document.addEventListener("retirarBtn")
+const transferirBtn = document.addEventListener("trasnferirBtn")
+const cambiarcontraseñaBtn = document.addEventListener("cambiarcontraseñaBtn")
+const salirBtn = document.addEventListener("salirBtn")
 
-const depositar = document.addEventListener("depositarBtn")
-const retirar = document.addEventListener("depositarBtn")
-const transferir = document.addEventListener("depositarBtn")
-const cambiarcontraseña = document.addEventListener("depositarBtn")
-const salir = document.addEventListener("depositarBtn")
-
+depositarBtn.addEventListener("click", )
 
 function depositar(){
 
 }
+function retirar(){
+
+}
+function transferir(){
+
+}
+function cambiarcontraseña(){
+
+}
+function salir(){
+    window.location.replace("")
+}
+function contraseña(){
+    console.log("funcion contraseña")
+    prompt ("Introduce la contraseña por teclado")
+
+}
+
+
+
+
