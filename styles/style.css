@@ -16,9 +16,12 @@ body{
     width: 50%;
     height: 30%;
     gap: 5px ;
-    
 }
 button{
+    
     border-radius: 5px;
-
+    gap: 3px;
+}
+p{
+    font-size:xx-large;
 }

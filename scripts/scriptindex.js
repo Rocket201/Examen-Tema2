@@ -20,13 +20,14 @@ const cambiarcontraseñaBtn = document.getElementById("cambiarcontraseñaBtn")
 const salirBtn = document.getElementById("salirBtn")
 const saldoTemplate = document.getElementById("saldoTempla")
 
-
+//los escuchamos con un addEvenListener
  depositarBtn.addEventListener("click", depositar);
  retirarBtn.addEventListener("click", retirar);
  transferirBtn.addEventListener("click", transferir);
  cambiarcontraseñaBtn.addEventListener("click", cambiarcontraseña);
  salirBtn.addEventListener("click", salir);
 
+ // creo la función depositar
 function depositar(){
     console.log("depostiar funciona")
    let deposito = parseFloat(prompt("introduce tu deposito: "))
@@ -41,7 +42,7 @@ function depositar(){
     }
 }
 
-
+//uncion para retirar dinero
 function retirar(){
   const extraccion = parseFloat(prompt("Introduce la candidad que quieres retirar:"));
   if (isNaN(extraccion) || extraccion <= 0 || extraccion > saldo) {
@@ -75,8 +76,10 @@ function transferir(){
 
 function cambiarcontraseña(){
   console.log("Entra en cambiar contraseña")
-  const nuevaContraseña = parseFloat(prompt("Introduce tu nueva contraseña:"))
-
+  let nuevaContraseña = parseFloat(prompt("Introduce tu nueva contraseña:"))
+    PIN_CORRECTO = nuevaContraseña;
+    actualizarContraseña()
+  
 }
 function salir(){
     console.log("salir funciona")
@@ -90,9 +93,7 @@ function contraseña(){
       intentos--;
       alert(`Te quedan ${intentos}`)
       contraseña = prompt("Ingrese su contraseña:");
-    }
-  
-    if (contraseña === PIN_CORRECTO) {
+    }if (contraseña === PIN_CORRECTO) {
       alert(`Sesion iniciada`);
       saldoActualizado()
     } else {
@@ -102,12 +103,12 @@ function contraseña(){
 }
 function saldoActualizado(){
     console.log(" Saldo actual ")
-        saldoTemplate.innerText = `${saldo} €`
+    saldoTemplate.innerText = `Tu saldo es: ${saldo} €`
 }
-// function actualizarContraseña(){
-//   console.log(" actualizar contraseña ")
-//       saldoTemplate.innerText = `${saldo} €`
-// }
+  function actualizarContraseña(){
+    console.log(" actualizar contraseña ")
+    saldoTemplate.innerText = `Tu nueva contraseña es: ${PIN_CORRECTO}`
+ }
 
 function validarIBAN(iban) {
   var Expresion = /^(ES\d{22})$/;
