@@ -4,24 +4,24 @@
 }
 
 body{
-    font-family: "fuente";
- background-color: bisque;
+    font-family: "fuente" !important;
+    background-color: bisque !important;
 }
 
 .container{
-  
-    background: rgb(93, 93, 215);
-    background: radial-gradient(circle, rgb(4, 26, 226) 0%, rgb(179, 5, 179) 100%);
-    border-radius: 5px;
-    width: 50%;
-    height: 30%;
-    gap: 5px ;
+    margin-top: 5%;
+    background: rgb(93, 93, 215) !important;
+    background: radial-gradient(circle, rgb(4, 26, 226) 0%, rgb(179, 5, 179) 100%) !important;
+    border-radius: 5px !important;
+    width: 50% !important;
+    height: 30% !important;
+    
 }
 button{
-    
-    border-radius: 5px;
-    gap: 3px;
+    border-radius: 5px !important;
+    margin: 10px !important;
+    gap: 3px !important;
 }
 p{
-    font-size:xx-large;
+    font-size:xx-large !important;
 }

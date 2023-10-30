@@ -42,7 +42,7 @@ function depositar(){
     }
 }
 
-//uncion para retirar dinero
+// Funcion para retirar dinero
 function retirar(){
   const extraccion = parseFloat(prompt("Introduce la candidad que quieres retirar:"));
   if (isNaN(extraccion) || extraccion <= 0 || extraccion > saldo) {
@@ -54,7 +54,7 @@ function retirar(){
   }
 
 }
-
+// Funcion para trasnferir dinero
 function transferir(){
   console.log(" Entra en transferir")
   let cantidad = parseFloat(prompt("Cuanto quiere transferir: "));
@@ -73,7 +73,7 @@ function transferir(){
     saldoActualizado() }
   }
 }
-
+// Funcion para cambiar la contraseña
 function cambiarcontraseña(){
   console.log("Entra en cambiar contraseña")
   let nuevaContraseña = parseFloat(prompt("Introduce tu nueva contraseña:"))
@@ -81,18 +81,19 @@ function cambiarcontraseña(){
     actualizarContraseña()
   
 }
+//funcion para salir del cajero
 function salir(){
     console.log("salir funciona")
     window.location.replace("/locations/salir.html")
 }
-
+//Funcion para introducir la contraseña y solo despues de eso te dejará ver el saldo
 function contraseña(){
     console.log("funcion contraseña")
   let contraseña = parseFloat(prompt("Introduce la contraseña: "))
     while (contraseña !== PIN_CORRECTO && intentos> 1) {
       intentos--;
       alert(`Te quedan ${intentos}`)
-      contraseña = prompt("Ingrese su contraseña:");
+      contraseña = prompt("Ingresa tu contraseña:");
     }if (contraseña === PIN_CORRECTO) {
       alert(`Sesion iniciada`);
       saldoActualizado()
@@ -101,10 +102,12 @@ function contraseña(){
       window.location.replace("/locations/error.html");
     }
 }
+// Funcion para Actuaizar el saldo
 function saldoActualizado(){
     console.log(" Saldo actual ")
     saldoTemplate.innerText = `Tu saldo es: ${saldo} €`
 }
+//funcion para actualizar contrASEÑA
   function actualizarContraseña(){
     console.log(" actualizar contraseña ")
     saldoTemplate.innerText = `Tu nueva contraseña es: ${PIN_CORRECTO}`
