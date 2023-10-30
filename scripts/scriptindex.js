@@ -1,6 +1,6 @@
 /**
  * Author: Alejandro González-Corroto Fernández
- * Git HUb: 
+ * Git HUb: https://github.com/Rocket201/Examen-Tema2.git
  */
 
 let saldo = 1000
